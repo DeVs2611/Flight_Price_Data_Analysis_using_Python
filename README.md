@@ -1,73 +1,148 @@
-# Flight Price Analysis
+# ✈️ Flight Price Prediction & Analysis (EDA + Machine Learning)
 
-This project analyzes flight price data to uncover insights and trends related to various factors like airline, route, time of travel, and number of stops. The analysis is performed using Python and popular data science libraries like Pandas, NumPy, Matplotlib, and Seaborn within a Google Colab environment.
+This project analyses flight price data and builds machine learning models to understand and predict airline ticket prices based on factors such as airline, route, duration, number of stops, and travel date.
 
-## Project Description
+It combines **Exploratory Data Analysis (EDA)**, **Feature Engineering**, and **Regression Models** to extract insights and evaluate predictive performance.
 
-The goal of this project is to explore and understand the factors that influence flight prices. By analyzing a dataset of flight information, we aim to identify key performance indicators (KPIs) and visualize trends to gain a deeper understanding of the flight market.
+📄 A full analytical report is also included in this repository.
 
-## Dataset
+---
 
-The dataset used in this project is sourced from a GitHub repository and contains detailed information about flights, including:
+## 🎯 Project Objectives
 
-- Airline
-- Date of Journey
-- Source and Destination airports
-- Departure and Arrival times
-- Duration of the flight
-- Total stops
-- Price
+* Understand key factors influencing flight ticket prices
+* Perform structured data cleaning and feature engineering
+* Build and compare multiple machine learning models
+* Evaluate models using standard performance metrics
+* Visualise trends and insights for decision-making
 
-The dataset is loaded and processed within the Colab notebook.
+---
 
-## Analysis and Key Findings
+## 📊 Dataset
 
-The project performs a comprehensive analysis of the flight price data, covering the following areas:
+The dataset contains flight records with the following attributes:
 
-- **Overall Data Exploration:** Loading, describing, and checking for null values in the dataset.
-- **Column-wise Analysis:** Detailed examination and processing of individual columns like 'Airline', 'Date_of_Journey', 'Dep_Time', 'Arrival_Time', 'Duration', 'Route', and 'Total_Stops'.
-- **KPI Analysis:** Calculation and visualization of key metrics such as:
-    - Average Ticket Price by Airline
-    - Average Ticket Price by Route (Source → Destination)
-    - Average Price by Number of Stops
-    - Flight Volume by Airline
-    - Flight Volume by Source Airport
-    - Monthly Price Trend
-    - Average Departure Hour by Airline
-    - Busiest routes (most frequent source-destination pairs)
-    - Price variation depending on the time of day (departure hour)
-    - Price variation depending on the day of the week or month
-    - Airlines with the highest average duration for non-stop flights
-    - Average arrival hour by airline
-    - Average duration of flights by airline
-    - Average duration of flights by number of stops
+* ✈️ Airline
+* 📅 Date of Journey
+* 🌍 Source and Destination
+* 🕒 Departure and Arrival Time
+* ⏱️ Duration
+* 🛑 Total Stops
+* 💰 Price
 
-The notebook includes code for data cleaning, feature engineering (e.g., extracting day, month, year, hour, and minute from time columns, calculating duration in minutes), and generating visualizations to support the findings.
+The dataset is loaded and processed directly inside the notebook.
 
-## Technologies Used
+---
 
-- Python
-- Pandas (for data manipulation and analysis)
-- NumPy (for numerical operations)
-- Matplotlib (for data visualization)
-- Seaborn (for enhanced data visualization)
-- Google Colab
+## 🧠 Methodology
 
-## How to Run the Project
+The notebook follows a complete data analytics and machine learning pipeline:
 
-1. **Open the Notebook:** The project is designed to be run in Google Colab. Open the provided `.ipynb` notebook file in Google Colab.
-2. **Run the Cells:** Execute the code cells sequentially. The notebook is structured to perform data loading, cleaning, analysis, and visualization step by step.
-3. **Explore the Output:** Observe the output of each cell, including dataframes, descriptive statistics, and visualizations, to understand the findings.
+### 1️⃣ Data Loading & Quality Checks
 
-Alternatively, you can clone this repository to your local machine and run the notebook in a Jupyter environment with the required libraries installed.
+* Dataset shape, missing values, and duplicates
+* Initial statistical exploration
 
-## Repository Structure
+### 2️⃣ Data Cleaning & Feature Engineering
 
-- `flight_price.ipynb`: The main Google Colab notebook containing the code for data analysis and visualization.
-- `README.md`: This file, providing an overview of the project.
+* Extracting **day, month, year** from journey dates
+* Extracting **hour and minute** from time columns
+* Converting flight duration into **total minutes**
+* Encoding categorical variables
 
-## Future Enhancements
+### 3️⃣ Exploratory Data Analysis (EDA) & KPIs
 
-- Implement machine learning models to predict flight prices.
-- Explore additional factors that might influence flight prices, such as seasonality, holidays, and special events.
-- Create an interactive dashboard to visualize the findings.
+* Average price by **airline**
+* Average price by **route (source → destination)**
+* Price variation by **number of stops**
+* Monthly and weekday price trends
+* Price variation by **departure time**
+* Flight volume by airline and source airport
+* Busiest routes
+* Average duration by airline and by stops
+
+### 4️⃣ Machine Learning Models
+
+The following regression models were implemented and compared:
+
+* 📈 Linear Regression
+* 🌳 Decision Tree Regressor
+* 🌲 Random Forest Regressor
+* 🚀 Gradient Boosting Regressor
+
+### 5️⃣ Model Evaluation
+
+Models were evaluated using:
+
+* Mean Absolute Error (MAE)
+* Root Mean Squared Error (RMSE)
+* R² Score
+
+Feature importance and diagnostic plots were also analysed to interpret model behaviour.
+
+---
+
+## 🛠️ Technologies Used
+
+* 🐍 Python
+* 🧮 Pandas, NumPy
+* 📊 Matplotlib, Seaborn
+* 🤖 Scikit-learn
+* 📓 Jupyter Notebook / Google Colab
+
+---
+
+## 📁 Repository Structure
+
+```
+📦 Flight-Price-Analysis
+ ┣ 📜 flight_price_analysis.ipynb   # Main notebook (EDA + ML models)
+ ┣ 📄 Project_Report.pdf            # Full analytical report
+ ┣ 📘 README.md                     # Project overview
+```
+
+---
+
+## ▶️ How to Run
+
+### ✅ Option 1 – Google Colab
+
+1. Open the notebook in Google Colab
+2. Run all cells sequentially
+
+### ✅ Option 2 – Local Jupyter
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+3. Open and run the notebook in Jupyter
+
+---
+
+## 🏁 Key Outcomes
+
+* Identified strong relationships between price and factors such as airline, route, number of stops, and travel month
+* Demonstrated that ensemble models (**Random Forest & Gradient Boosting**) outperform simple linear models
+* Built a reproducible pipeline from raw data to predictive insights
+* Produced a full analytical report documenting methodology and findings
+
+---
+
+## 🚀 Future Enhancements
+
+* Hyperparameter tuning and cross-validation
+* Interactive dashboard (Streamlit / Power BI)
+* Deployment of the best model as a web application
+* Incorporation of external factors (holidays, weather, demand indicators)
+
+---
+
+## 👨‍💻 Author
+
+**Dev Srivastava**
+🎓 MSc Computer Science – University of Warwick
+📍 United Kingdom
