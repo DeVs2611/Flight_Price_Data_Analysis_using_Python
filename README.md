@@ -99,6 +99,7 @@ Feature importance and diagnostic plots were also analysed to interpret model be
  ┣ 📜 flight_price_analysis.ipynb   # Main notebook (EDA + ML models)
  ┣ 📄 Project_Report.pdf            # Full analytical report
  ┣ 📘 README.md                     # Project overview
+ ┣ 📊 flight_price.xlsx             # Raw File
 ```
 
 ---
