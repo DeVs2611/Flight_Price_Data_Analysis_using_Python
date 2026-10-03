@@ -1,5 +1,9 @@
 # ✈️ Flight Price Prediction & Analysis (EDA + Machine Learning)
 
+**[Explore the interactive case study →](https://devs2611.github.io/Flight_Price_Data_Analysis_using_Python/)**
+
+A portfolio website with historical fare filters, model comparisons, expandable research figures, and implementation examples.
+
 This project analyses flight price data and builds machine learning models to understand and predict airline ticket prices based on factors such as airline, route, duration, number of stops, and travel date.
 
 It combines **Exploratory Data Analysis (EDA)**, **Feature Engineering**, and **Regression Models** to extract insights and evaluate predictive performance.
@@ -96,7 +100,7 @@ Feature importance and diagnostic plots were also analysed to interpret model be
 
 ```
 📦 Flight-Price-Analysis
- ┣ 📜 flight_price_analysis.ipynb   # Main notebook (EDA + ML models)
+ ┣ 📜 Flight_Price.ipynb   # Main notebook (EDA + ML models)
  ┣ 📄 Project_Report.pdf            # Full analytical report
  ┣ 📘 README.md                     # Project overview
  ┣ 📊 flight_price.xlsx             # Raw File
@@ -117,7 +121,7 @@ Feature importance and diagnostic plots were also analysed to interpret model be
 2. Install dependencies:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+pip install pandas numpy matplotlib seaborn scikit-learn openpyxl
 ```
 
 3. Open and run the notebook in Jupyter
